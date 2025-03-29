@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversion de Chaîne</title>
+</head>
+
+<body>
+    <h2>Inversion de Chaîne</h2>
+    <label for="inputText">Entrez un texte :</label>
+    <input type="text" id="inputText" placeholder="Saisissez un mot">
+    <button onclick="showReversedString()">Inverser</button>
+    <p id="result"></p>
+
+    <script>
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+
+        function showReversedString() {
+            let input = document.getElementById("inputText").value;
+            let reversed = reverseString(input);
+            document.getElementById("result").textContent = `Résultat : ${reversed}`;
+        }
+    </script>
+</body>
+
+</html>

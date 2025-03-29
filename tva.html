@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVA Calculator</title>
+</head>
+<body>
+    <script>
+        const vatRate = 18.5 / 100; 
+        const rawPrice = parseFloat(prompt("Enter the price:"));
+        let finalPrice; 
+
+        if (!isNaN(rawPrice) && rawPrice >= 0) {
+            finalPrice = rawPrice * (1 + vatRate);
+            alert(`The final price including TVA is: ${finalPrice}`);
+        } else {
+            alert("Please enter a valid number.");
+        }
+        
+        console.log(finalPrice); 
+    </script>
+</body>
+</html>
+
